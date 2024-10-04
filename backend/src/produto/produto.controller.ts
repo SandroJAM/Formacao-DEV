@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Get, Post, Param, Delete } from '@nestjs/common';
 //import { resolve } from 'path';
 //import { Produto, produtos } from 'src/core';
 import { Produto } from 'src/core';
@@ -9,6 +9,11 @@ export class ProdutoController {
 
   constructor(readonly repo: ProdutoPrisma) {}
 
+  @Post()
+  async salvarProduto(@Body() produto: Produto): Promise<void> {
+    return this.repo.salvar(produto);
+  }
+
   @Get()
   async obterProdutos(): Promise<Produto[]> {
     return this.repo.obter();
@@ -17,6 +22,11 @@ export class ProdutoController {
   @Get(':id')
   async obterProdutoPorId(@Param('id') id: string): Promise<Produto | null> {
     return this.repo.obterPorId(+id);
+  }
+
+  @Delete(':id')
+  async excluirProduto(@Param('id') id: string): Promise<void> {
+    return this.repo.excluir(+id);
   }
 
 }
