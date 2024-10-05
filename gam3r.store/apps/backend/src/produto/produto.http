@@ -1,0 +1,41 @@
+GET http://localhost:3005/produtos
+
+###
+
+GET http://localhost:3005/produtos/23
+
+###
+
+DELETE  http://localhost:3005/produtos/21
+
+###
+
+POST http://localhost:3005/produtos
+Content-Type: application/json
+
+{
+   "nome": "Placa de Vídeo AMD Radeon RX 6800 XT",
+  "descricao": "A RX 6800 XT possui 16GB GDDR6 e arquitetura RDNA 2, proporcionando excelente desempenho em jogos 1440p e 4K. Inclui suporte a Ray Tracing e tecnologia Smart Access Memory para CPUs Ryzen.",
+  "marca": "ASRock",
+  "modelo": "90-GA28ZZ-00UANF",
+  "imagem": "https://firebasestorage.googleapis.com/v0/b/formacao-dev.appspot.com/o/lancamentos%2Fgam3rstore%2Famd-radeon-6800-xt.png?alt=media&token=f2fdddc2-fc6b-4286-8452-10add1ff37f8",
+  "nota": 4.7,
+  "videoReview": "https://www.youtube.com/embed/ddbpej8sM9s",
+  "tags": [
+    "Ray Tracing",
+    "16GB GDDR6",
+    "Smart Access Memory"
+  ],
+  "precoBase": 6449.99,
+  "precoPromocional": 5799.99,
+  "menorPreco": 5499.99,
+  "maiorPreco": 8199.99,
+  "precoMedio": 5999.99,
+  "especificacoes": {
+    "TDP": "300W",
+    "peso": "2,52 kg",
+    "destaque": "16GB GDDR6",
+    "Conectividade": "HDMI 2.1, DisplayPort 1.4",
+    "Stream Processors": 4608
+  }
+}

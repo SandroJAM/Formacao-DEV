@@ -1,0 +1,22 @@
+{
+  "name": "@evolution/core",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --dts --minify",
+    "dev": "tsup src/index.ts --dts --watch",
+    "test": "jest --watchAll --collectCoverage"
+  },
+  "keywords": [],
+  "author": "Sandro Muniz com Formcao DEV",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "tsup": "^8.2.4"
+  },
+  "dependencies": {
+    "@evolution/core": "file:"
+  }
+}
